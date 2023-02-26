@@ -58,3 +58,7 @@ class TicTacToeGame:
                 self._has_winner = True
                 self.winner_combo = combo
                 break
+
+    def has_winner(self):
+        """Return True if the game has a winner, and False otherwise."""
+        return self._has_winner
