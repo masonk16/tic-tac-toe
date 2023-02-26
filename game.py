@@ -35,3 +35,7 @@ class TicTacToeGame:
         first_diagonal = [row[i] for i, row in enumerate(rows)]
         second_diagonal = [col[j] for j, col in enumerate(reversed(columns))]
         return rows + columns + [first_diagonal, second_diagonal]
+
+    def toggle_player(self):
+        """Return a toggled player."""
+        self.current_player = next(self._players)
