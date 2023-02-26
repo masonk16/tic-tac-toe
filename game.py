@@ -70,3 +70,11 @@ class TicTacToeGame:
             move.label for row in self._current_moves for move in row
         )
         return no_winner and all(played_moves)
+
+    def reset_game(self):
+        """Reset the game state to play again."""
+        for row, row_content in enumerate(self._current_moves):
+            for col, _ in enumerate(row_content):
+                row_content[col] = Move(row, col)
+        self._has_winner = False
+        self.winner_combo = []
